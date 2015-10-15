@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LGH-31-Nqr">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Signup View Controller-->
+        <scene sceneID="jof-eh-ENB">
+            <objects>
+                <viewController id="LGH-31-Nqr" customClass="SignupViewController" customModule="UIDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cVe-4P-JHE"/>
+                        <viewControllerLayoutGuide type="bottom" id="sp2-CM-49K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v0x-Bb-0Kr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNX-Q6-Bwv">
+                                <rect key="frame" x="33" y="60" width="255" height="34"/>
+                                <animations/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Welecome and Sign Up!">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="ChalkboardSE-Regular"/>
+                                            <font key="NSOriginalFont" size="24" name="ChalkboardSE-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TyE-uD-6sl">
+                                <rect key="frame" x="16" y="120" width="288" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LGH-31-Nqr" id="qKW-pv-aLA"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mhu-Ms-jlX">
+                                <rect key="frame" x="33" y="158" width="267" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LGH-31-Nqr" id="V4b-pq-9E4"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU3-n8-EId">
+                                <rect key="frame" x="136" y="206" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Signup"/>
+                                <connections>
+                                    <action selector="signup:" destination="LGH-31-Nqr" eventType="touchUpInside" id="FbD-wo-gXG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pb-Zq-Mzx">
+                                <rect key="frame" x="147" y="518" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="FU9-d7-ziG" kind="modal" id="vax-la-rEn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.61960784310000006" green="0.66274509800000003" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="YNX-Q6-Bwv" firstAttribute="centerX" secondItem="v0x-Bb-0Kr" secondAttribute="centerX" id="Hm6-sI-3Xy"/>
+                            <constraint firstItem="TyE-uD-6sl" firstAttribute="top" secondItem="YNX-Q6-Bwv" secondAttribute="bottom" constant="26" id="Jou-U4-67p"/>
+                            <constraint firstItem="YNX-Q6-Bwv" firstAttribute="top" secondItem="cVe-4P-JHE" secondAttribute="bottom" constant="40" id="UXL-by-2Cb"/>
+                            <constraint firstItem="TyE-uD-6sl" firstAttribute="centerX" secondItem="v0x-Bb-0Kr" secondAttribute="centerX" id="fQA-g4-H43"/>
+                            <constraint firstItem="TyE-uD-6sl" firstAttribute="trailing" secondItem="v0x-Bb-0Kr" secondAttribute="trailingMargin" id="hJw-cq-Jca"/>
+                            <constraint firstItem="TyE-uD-6sl" firstAttribute="leading" secondItem="v0x-Bb-0Kr" secondAttribute="leadingMargin" id="pap-TU-7ua"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fbf-bX-Bq3" appends="YES" id="kWP-oE-abH"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="emailTExtField" destination="TyE-uD-6sl" id="Qn4-FH-E7A"/>
+                        <outlet property="passwordField" destination="Mhu-Ms-jlX" id="mpH-VV-Qwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmV-AM-HbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fbf-bX-Bq3">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="LGH-31-Nqr" id="Lii-jV-mAF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="193" y="369"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="KaG-cb-KfJ">
+            <objects>
+                <viewController id="FU9-d7-ziG" customClass="LoginViewController" customModule="UIDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVw-Jt-LAx"/>
+                        <viewControllerLayoutGuide type="bottom" id="9XC-cU-CpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ave-o4-KFj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgS-Le-48C">
+                                <rect key="frame" x="136" y="518" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Signup"/>
+                                <connections>
+                                    <segue destination="tpA-Es-hpp" kind="unwind" unwindAction="unwind:" id="abh-6I-4cW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.82835139840000005" green="1" blue="0.61262800480000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f11-zL-z5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tpA-Es-hpp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="369"/>
+        </scene>
+    </scenes>
+</document>
