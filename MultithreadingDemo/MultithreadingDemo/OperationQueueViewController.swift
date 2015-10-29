@@ -24,7 +24,7 @@ class OperationQueueViewController: UIViewController {
 
         init(imageURL: NSURL) {
             self.imageURL = imageURL
-            print("operation")
+            print("operation init")
         }
         
         override func main() {
@@ -49,7 +49,7 @@ class OperationQueueViewController: UIViewController {
         }
 
         deinit {
-            print("operation")
+            print("operation deinit")
         }
     }
     
@@ -105,10 +105,10 @@ class OperationQueueViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        print("init")
+        print("OperationQueueViewController init")
     }
     
     deinit {
-        print("deinit")
+        print("OperationQueueViewController deinit")
     }
 }
