@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3e4-X3-nbQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Hubble Collection-->
+        <scene sceneID="Czd-TF-ms7">
+            <objects>
+                <collectionViewController id="1p4-KP-6gd" customClass="HubbleCollectionViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rco-Nr-rAY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="STr-fO-l9Q">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="9I9-Vu-RAw" customClass="HubbleCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hubble1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9HH-YW-A9x">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9HH-YW-A9x" secondAttribute="trailing" id="NL0-OL-tZT"/>
+                                    <constraint firstItem="9HH-YW-A9x" firstAttribute="leading" secondItem="9I9-Vu-RAw" secondAttribute="leading" id="OZn-sU-iQ0"/>
+                                    <constraint firstAttribute="bottom" secondItem="9HH-YW-A9x" secondAttribute="bottom" id="VHr-Jb-Bun"/>
+                                    <constraint firstItem="9HH-YW-A9x" firstAttribute="top" secondItem="9I9-Vu-RAw" secondAttribute="top" id="m5J-Sb-cUl"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="9HH-YW-A9x" id="crp-CE-O25"/>
+                                    <segue destination="ssM-dL-cfH" kind="show" identifier="showImage" id="X4g-RK-Xb2"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="1p4-KP-6gd" id="yK7-lD-ceU"/>
+                            <outlet property="delegate" destination="1p4-KP-6gd" id="bWe-Yq-Umw"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Hubble Collection" id="6Qn-Ql-Hyo"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbd-32-fnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231" y="380"/>
+        </scene>
+        <!--Hubble Image View Controller-->
+        <scene sceneID="hAz-al-sIY">
+            <objects>
+                <viewController id="ssM-dL-cfH" customClass="HubbleImageViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ep1-R6-Bu4"/>
+                        <viewControllerLayoutGuide type="bottom" id="PMy-Lu-xP0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pN8-lX-YBt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hubble1.png" translatesAutoresizingMaskIntoConstraints="NO" id="w3j-ur-yhb">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w3j-ur-yhb" firstAttribute="top" secondItem="ep1-R6-Bu4" secondAttribute="bottom" id="V2G-Bd-Tih"/>
+                            <constraint firstAttribute="trailing" secondItem="w3j-ur-yhb" secondAttribute="trailing" id="iVQ-wa-Lvg"/>
+                            <constraint firstItem="PMy-Lu-xP0" firstAttribute="top" secondItem="w3j-ur-yhb" secondAttribute="bottom" id="nQS-PM-kvS"/>
+                            <constraint firstItem="w3j-ur-yhb" firstAttribute="leading" secondItem="pN8-lX-YBt" secondAttribute="leading" id="qtC-Bc-FWU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="w3j-ur-yhb" id="RuU-NE-Rb2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsF-jc-ZqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="380"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o9B-DV-H5a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3e4-X3-nbQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6wH-bf-vag">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1p4-KP-6gd" kind="relationship" relationship="rootViewController" id="IP9-Mh-T8b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfm-Kk-fe7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="380"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hubble1.png" width="521" height="391"/>
+    </resources>
+</document>

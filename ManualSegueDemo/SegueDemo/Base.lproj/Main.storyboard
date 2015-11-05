@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -32,14 +33,26 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1B-vb-YYB"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0La-Bt-6uV">
+                                <rect key="frame" x="30" y="54" width="540" height="221"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Manual Segue urobíte v story board tak, že ťaháte s ctrl zo žltej ikony na lište source controller scény do taget controller scény. Segue programovo vyvoláte "performSegueWithIdentifier()", musíte však nastaviť identifikátor - kliknite na segue, v attribute inspector nastavte ID.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h1s-dM-XSI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ch-FQ-iuq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0La-Bt-6uV" secondAttribute="trailing" constant="10" id="GH9-4v-RAF"/>
                             <constraint firstItem="wfj-iS-i7g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S4h-NH-No6"/>
                             <constraint firstItem="wfj-iS-i7g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ULb-1R-ZXq"/>
+                            <constraint firstItem="0La-Bt-6uV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Vvt-nW-2Co"/>
+                            <constraint firstItem="wfj-iS-i7g" firstAttribute="top" secondItem="0La-Bt-6uV" secondAttribute="bottom" constant="10" id="gWZ-7w-hRQ"/>
                             <constraint firstItem="h1s-dM-XSI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uPl-19-eAP"/>
+                            <constraint firstItem="0La-Bt-6uV" firstAttribute="top" secondItem="h1s-dM-XSI" secondAttribute="bottom" constant="13" id="vGK-vR-n9s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -48,6 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="346" y="377"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="emK-nx-NLm">
