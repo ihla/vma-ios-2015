@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="88" id="KGk-i7-Jjw" customClass="ITLCoursesTableViewCell" customModule="JsonDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DGb-b5-Fmx">
+                        <rect key="frame" x="8" y="8" width="71" height="71"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="71" id="QV9-BI-P6W"/>
+                            <constraint firstAttribute="height" constant="71" id="laO-dj-TUk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EsF-ub-10f">
+                        <rect key="frame" x="87" y="8" width="228" height="71"/>
+                        <animations/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="18" name="Futura-Medium"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="DGb-b5-Fmx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="K5I-AB-ZeY"/>
+                    <constraint firstItem="EsF-ub-10f" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="LPa-JK-wOA"/>
+                    <constraint firstItem="EsF-ub-10f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="NB9-8i-riq"/>
+                    <constraint firstItem="DGb-b5-Fmx" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Ttf-3B-Sgt"/>
+                    <constraint firstItem="EsF-ub-10f" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="oG2-lJ-Lab"/>
+                    <constraint firstItem="EsF-ub-10f" firstAttribute="leading" secondItem="DGb-b5-Fmx" secondAttribute="trailing" constant="8" id="wfO-01-nyI"/>
+                    <constraint firstItem="DGb-b5-Fmx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="zb2-uF-zjR"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Ttf-3B-Sgt"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="courseImageView" destination="DGb-b5-Fmx" id="mYT-jY-6BH"/>
+                <outlet property="courseTextLabel" destination="EsF-ub-10f" id="pQH-iD-ZmI"/>
+            </connections>
+            <point key="canvasLocation" x="297.5" y="402"/>
+        </tableViewCell>
+    </objects>
+</document>
